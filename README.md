@@ -95,4 +95,56 @@ Add Request
 | :-------- | :------- | :-------------------------------- |
 | `mentorRequestDetails `      | `MentorRequest` | Create a new mentor request by providing mentor request details in the request body. |
 
+## Additional Details :
+
+### Services
+#### MentorService
+The MentorService handles operations related to mentor accounts.
+
+* getAllMentors(): Get a list of all mentors. <br>
+* getMentorByName(name): Get mentor details by name.<br>
+* createMentor(mentorDetails): Create a new mentor account. <br>
+<br> <br>
+#### MentorRequestService
+The MentorRequestService manages mentor request operations.
+
+* getAllMentorRequests(): Get a list of all mentor requests. <br>
+
+* approveMentorRequest(requestId): Approve a mentor request by its ID. <br>
+
+* rejectMentorRequest(requestId): Reject a mentor request by its ID. <br>
+
+* createMentorRequest(mentorRequestDetails): Create a new mentor request. <br>
+<br> <br>
+#### StatisticsService
+The StatisticsService provides web app statistics.
+
+* getWebAppStatistics(): Retrieve web app statistics.
+<br> <br> <br>
+### Entities
+#### Mentor
+The Mentor entity represents mentor account details.
+
+* id: Mentor's unique identifier. <br>
+* name: Mentor's name. <br>
+* age: Mentor's age. <br>
+* phoneNo: Mentor's phone number. <br>
+* cv: Mentor's CV. <br> <br> <br>
+#### MentorRequest
+The MentorRequest entity represents mentor request details.
+
+* id: Request's unique identifier. <br>
+* name: Requester's name. <br>
+* job: Requester's job. <br>
+* status: Request status (e.g., "Pending," "Approved," "Rejected"). <br> <br> <br>
+
+#### Statistics
+The Statistics entity holds web app statistics.
+
+* id: Statistics record's unique identifier. <br>
+* totalConsultants: Total number of consultants. <br>
+* totalClients: Total number of clients. <br>
+* totalSessionsBooked: Total sessions booked. <br>
+
+
 
